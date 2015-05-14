@@ -1,0 +1,39 @@
+{
+  "name": "loading",
+  "version": "0.0.1",
+  "description": "mobile loading",
+  "keywords": [],
+  "homepage": "",
+  "author": "airyland <airyland@qq.com>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "index.js",
+    "dependencies": {
+      "eventor": "~0.0.3",
+      "zepto": "~1.1.3"
+    },
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    },
+    "build": {
+      "base64": true
+    }
+  },
+  "devDependencies": {
+    "spm": "3"
+  },
+  "scripts": {
+    "test": "spm test",
+    "build": "spm build"
+  },
+  "dependencies": {
+    "eventor": "0.0.2"
+  }
+}
