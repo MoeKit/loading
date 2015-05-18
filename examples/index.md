@@ -5,7 +5,6 @@
 ## 定时关闭
 
 ````html
-<link rel="stylesheet" type="text/css" href="../style.css">
 <a id="show1" class="demo-btn" href="javascript:">点我,1s后消失</a>
 ````
 
