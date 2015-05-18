@@ -1,3 +1,4 @@
+require('./style.css');
 var Eventor = require('eventor');
 var $ = require('zepto');
 
@@ -20,6 +21,7 @@ var Loading = function(content, option) {
 	this.$content = $content;
 	this.$content.text(content);
 	this.option = $.extend(defaults, option);
+	return this;
 };
 
 Eventor.mixTo(Loading);
@@ -44,6 +46,16 @@ Loading.prototype.hide = function() {
 	this.$element.hide().removeClass('ui-dialog-show');
 	this.emit('hide');
 	return this;
+};
+
+Loading.prototype.setContent = function(text){
+	this.$content.text(text);
+	return this;
+};
+
+// 自动弹出
+if(window.pre_loading){
+	window[window['pre_loading']['id']] = new Loading(window.pre_loading.content).show();
 }
 
 module.exports = Loading;
