@@ -1,6 +1,6 @@
 {
   "name": "loading",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "mobile loading",
   "keywords": [],
   "homepage": "",
@@ -24,7 +24,12 @@
     },
     "output": [
       "index.html", "index.js"
-    ]
+    ],
+    "build":{
+      "global":{
+    
+      }
+    }
   },
   "devDependencies": {
     "spm": "3"

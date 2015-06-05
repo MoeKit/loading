@@ -48,14 +48,20 @@ Loading.prototype.hide = function() {
 	return this;
 };
 
-Loading.prototype.setContent = function(text){
+Loading.prototype.setContent = function(text) {
 	this.$content.text(text);
 	return this;
 };
 
 // 自动弹出
-if(window.pre_loading){
-	window[window['pre_loading']['id']] = new Loading(window.pre_loading.content).show();
+setTimeout(function(){
+	checkPreConfig();
+},10);
+
+function checkPreConfig() {
+	if (window.pre_loading) {
+		window[window['pre_loading']['id']] = new Loading(window.pre_loading.content).show();
+	}
 }
 
 module.exports = Loading;
